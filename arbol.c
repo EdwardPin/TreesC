@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// un wizard (input) que a medida que el usuario ingrese datos, crea el arbol 
 // Estructura del nodo
 struct Node {
     int key;               // Valor almacenado en el nodo
@@ -66,9 +67,9 @@ struct Node* search(struct Node* root, int key) {
 
 void inorder(struct Node* root) {
     if (root == NULL) return;
-    inorder(root->left);
-    printf("%d ", root->key);
     inorder(root->right);
+    printf("%d ", root->key);
+    inorder(root->left);
 }
 
 void preorder(struct Node* root) {
